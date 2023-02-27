@@ -1,15 +1,15 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import News from './components/News';
-import Teams from './components/Teams';
-import Vereinsspielplan from './components/Vereinsspielplan';
-import Kidsclub from './components/Kidsclub';
-import Anfahrt from './components/Anfahrt';
-import Verein from './components/Verein';
-import Links from './components/LInks';
-import { Route, Routes } from 'react-router-dom';
+import News from "./components/News";
+import Teams from "./components/Teams";
+import Vereinsspielplan from "./components/Vereinsspielplan";
+import Kidsclub from "./components/Kidsclub";
+import Anfahrt from "./components/Anfahrt";
+import Verein from "./components/Verein";
+import Links from "./components/LInks";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
 export default App;
