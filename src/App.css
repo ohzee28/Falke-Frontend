@@ -1,18 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: League Gothic;
+  font-family: "League Gothic", Sans-Serif;
 }
 
 body {
   margin: 0;
-
 }
 
-
 .nav {
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -43,15 +43,15 @@ body {
   height: 100%;
   display: flex;
   align-items: strech;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .nav li.active {
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
 }
 
 .nav li:hover {
-  background-color: #DA1B2B;
+  background-color: #da1b2b;
 }
 
 .ElfsightWidget {
