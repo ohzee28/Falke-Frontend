@@ -10,6 +10,7 @@ body {
 
 }
 
+
 .nav {
   background-color: #1F1F1F;
   color: white;
@@ -20,8 +21,12 @@ body {
   padding: 0 1rem;
 }
 
+.falkelogo {
+  height: 40px;
+}
+
 .fsvfalke95 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .nav ul {
@@ -47,6 +52,10 @@ body {
 
 .nav li:hover {
   background-color: #DA1B2B;
+}
+
+.ElfsightWidget {
+  margin: 3;
 }
 
 .App {
