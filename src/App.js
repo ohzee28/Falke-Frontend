@@ -8,7 +8,8 @@ import Vereinsspielplan from "./components/Vereinsspielplan";
 import Kidsclub from "./components/Kidsclub";
 import Anfahrt from "./components/Anfahrt";
 import Verein from "./components/Verein";
-import Links from "./components/LInks";
+import Links from "./components/Links";
+import Article from "./components/Article";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/anfahrt" element={<Anfahrt />} />
           <Route path="/verein" element={<Verein />} />
           <Route path="/links" element={<Links />} />
+          <Route path="/articles/:id" element={<Article />} />
         </Routes>
       </div>
     </>
