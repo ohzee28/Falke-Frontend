@@ -9,7 +9,7 @@ import Vereinsspielplan from "./components/Vereinsspielplan";
 import Kidsclub from "./components/Kidsclub";
 import Anfahrt from "./components/Anfahrt";
 import Verein from "./components/Verein";
-import LinksComponent from "./components/Links";
+// import LinksComponent from "./components/Links";
 import Article from "./components/Article";
 import TeamSeite from "./components/TeamSeite";
 import { Route, Routes } from "react-router-dom";
@@ -85,7 +85,7 @@ function App() {
           <Route path="/kidsclub" element={<Kidsclub />} />
           <Route path="/anfahrt" element={<Anfahrt />} />
           <Route path="/verein" element={<Verein />} />
-          <Route path="/links" element={<LinksComponent />} />
+          {/* <Route path="/links" element={<LinksComponent />} /> */}
           <Route path="/articles/:id" element={<Article articles={articles} />} />
           <Route path="/teamseite/:id" element={<TeamSeite teams={teams} />} />
         </Routes>
