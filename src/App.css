@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  background-color: #da1b2b;
 }
 
 .nav {
@@ -60,4 +61,18 @@ body {
 
 .App {
   text-align: center;
+}
+
+.news {
+  border: 1px solid #000000;
+  border-radius: 2px;
+  padding: 2px;
+  max-width: 50%;
+  height: auto;
+}
+.articles {
+
+}
+.teamimage {
+ 
 }
