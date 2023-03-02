@@ -18,6 +18,8 @@ function TeamSeite({ teams }) {
             <div className="teamfoto">
                 <img src={thisTeam.image} alt="Foto" />
             </div>
+            
+
             <Link to="/teams">
                 <button className="button">Zurück zur Teamübersicht</button>
             </Link>

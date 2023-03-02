@@ -1,3 +1,3 @@
-export default function Links() {
+export default function LinksComponent() {
     return <h1>Links</h1>;
 }
