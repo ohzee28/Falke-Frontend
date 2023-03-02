@@ -31,10 +31,10 @@ function TeamSeite({ teams }) {
         thisTeam &&
           thisTeam.websitekeys.length &&
           thisTeam.websitekeys.map((el, index) => {
-            console.log(el);
+            console.log("key", el);
             return new window.fussballdeWidgetAPI().showWidget(
               `widget${index + 1}`,
-              `${index + 1}`
+              `${el}`
             );
           });
       }
@@ -44,7 +44,7 @@ function TeamSeite({ teams }) {
   return thisTeam ? (
     <div className="teamcontainer">
       <div id="widget1"></div>
-      <div id="widget2"></div>
+      {thisTeam.websitekeys.length > 1 ? <div id="widget2"></div> : ""}
       <div className="teamname">
         <h2>{thisTeam.teamname}</h2>
       </div>
