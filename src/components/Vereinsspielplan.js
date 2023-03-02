@@ -26,7 +26,7 @@ export default function Vereinsspielplan() {
         }, 100);
     }, []);
 
-    return <div id="widget1"></div>;
+    return <div className="widgetspielplan" id="widget1"></div>;
 
     //   return (
     //     <>

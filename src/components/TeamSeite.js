@@ -39,15 +39,15 @@ function TeamSeite({ teams }) {
 
     return thisTeam ? (
         <div className="teamcontainer">
-         <div id="widget1"></div>
+         
             <div className="teamname">
                 <h2>{thisTeam.teamname}</h2>
             </div>
+            <div id="widget1"></div>
+            
             <div className="teamfoto">
                 <img src={thisTeam.image} alt="Foto" />
             </div>
-
-
             <Link to="/teams">
                 <button className="button">Zurück zur Teamübersicht</button>
             </Link>
