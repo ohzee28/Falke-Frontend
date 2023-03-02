@@ -15,9 +15,12 @@ import TeamSeite from "./components/TeamSeite";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
+  const [articles, setArticles] = useState([]);
+  const [teams, setTeams] = useState([]);
 
-  const [articles, setArticles] = useState([])
-  const [teams, setTeams] = useState([])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // useEffect(() => {
 
@@ -38,40 +41,36 @@ function App() {
   //       setTeams(json)
   //     }
 
-
   //   }
   //   fetchArticles()
   //   fetchTeams()
   // }, [])
 
   useEffect(() => {
-
     const fetchArticles = async () => {
-      const response = await fetch('https://falkebackend.onrender.com/articles');
-      const json = await response.json()
-      console.log(articles)
+      const response = await fetch(
+        "https://falkebackend.onrender.com/articles"
+      );
+      const json = await response.json();
+      console.log(articles);
       if (response.ok) {
-        setArticles(json)
+        setArticles(json);
       }
-    }
+    };
 
     const fetchTeams = async () => {
-      const response = await fetch('https://falkebackend.onrender.com/teams');
-      const json = await response.json()
-      console.log(teams)
+      const response = await fetch("https://falkebackend.onrender.com/teams");
+      const json = await response.json();
+      console.log(teams);
       if (response.ok) {
-        setTeams(json)
+        setTeams(json);
       }
+    };
+    fetchArticles();
+    fetchTeams();
+  }, []);
 
-
-    }
-    fetchArticles()
-    fetchTeams()
-
-  }, [])
-
-  console.log('teams', teams)
-
+  console.log("teams", teams);
 
   return (
     <>
@@ -86,7 +85,10 @@ function App() {
           <Route path="/anfahrt" element={<Anfahrt />} />
           <Route path="/verein" element={<Verein />} />
           {/* <Route path="/links" element={<LinksComponent />} /> */}
-          <Route path="/articles/:id" element={<Article articles={articles} />} />
+          <Route
+            path="/articles/:id"
+            element={<Article articles={articles} />}
+          />
           <Route path="/teamseite/:id" element={<TeamSeite teams={teams} />} />
         </Routes>
       </div>
