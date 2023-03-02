@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import FalkeLoader from "./FalkeLoader";
 
 function TeamSeite({ teams }) {
   useEffect(() => {
@@ -56,7 +57,7 @@ function TeamSeite({ teams }) {
       </Link>
     </div>
   ) : (
-    "...loading"
+    <FalkeLoader />
   );
 }
 

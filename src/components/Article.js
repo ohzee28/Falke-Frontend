@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import FalkeLoader from "./FalkeLoader";
 
 function Article({ articles }) {
   useEffect(() => {
@@ -29,7 +30,7 @@ function Article({ articles }) {
       </Link>
     </div>
   ) : (
-    "not found"
+    <FalkeLoader />
   );
 }
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import FalkeLoader from "./FalkeLoader";
 
 const Teams = ({ teams }) => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const Teams = ({ teams }) => {
       </div>
     </div>
   ) : (
-    <h1>...loading</h1>
+    <FalkeLoader />
   );
 };
 
