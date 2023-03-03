@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom";
 import FalkeLoader from "./FalkeLoader";
+import Article from "./Article";
 
 export default function Homepage({ articles }) {
     useEffect(() => {
@@ -25,6 +26,9 @@ export default function Homepage({ articles }) {
                 <div><img src={articles[2].image} /></div>
                 <div><img src={articles[1].image} /></div>
             </div>
+
+
+
             <ul>
                 <li className="active"><Link to="/news">NEWS</Link></li>
                 <li className="active"><Link to="/teams">TEAMS</Link></li>
@@ -41,6 +45,6 @@ export default function Homepage({ articles }) {
             </ul>
         </section>
     ) : <FalkeLoader />
-
+    console.log(articles);
 
 }
