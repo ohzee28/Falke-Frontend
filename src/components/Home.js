@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import FalkeLoader from "./FalkeLoader";
+import Hero from "./Hero";
 
 export default function Homepage({ articles }) {
   useEffect(() => {
@@ -25,6 +26,9 @@ export default function Homepage({ articles }) {
 
   return articles.length && sortedArticles.length ? (
     <div>
+
+    <Hero/>
+    
       <div lassName="hero-section">HERO // STATISCHES BILD</div>
 
       <div className="latest-news-container">

@@ -23,7 +23,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 30px;
+  box-shadow: 0 5px 15px rgb(55, 56, 57);
+  position: fixed;
+  width: 95%;
+  height: 80px;
+  top: 20px;
+  left: 3%;
 }
 
 .nav-left {
@@ -74,7 +80,7 @@ body {
 }
 
 .container {
-  border: solid 1px yellow;
+  /* border: solid 1px yellow; */
   width: 70vw;
   margin: 0 auto;
   display: flex;
