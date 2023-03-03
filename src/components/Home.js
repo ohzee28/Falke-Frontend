@@ -25,7 +25,7 @@ export default function Homepage({ articles }) {
 
   return articles.length && sortedArticles.length ? (
     <div>
-      <div>HERO // STATISCHES BILD</div>
+      <div lassName="hero-section">HERO // STATISCHES BILD</div>
 
       <div className="latest-news-container">
         <div className="latest-news-card">
