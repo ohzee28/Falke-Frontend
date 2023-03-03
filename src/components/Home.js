@@ -27,7 +27,7 @@ export default function Homepage({ articles }) {
     <div>
       <div>HERO // STATISCHES BILD</div>
 
-      <div className="latest-news-container">
+      <div className="latest-news-container">git 
         <div className="latest-news-card">
           <img
             className="latest-news-img"
