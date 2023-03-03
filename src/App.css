@@ -8,7 +8,7 @@
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 
@@ -18,12 +18,12 @@ body {
 }
 
 .nav {
-  /* background-color: #1f1f1f; */
+  background-color: #1f1f1f;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .nav-left {
@@ -57,6 +57,12 @@ body {
   padding: 0.25rem;
 }
 
+.nav li {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
 .nav li.active {
   background-color: #1f1f1f;
 }
@@ -82,15 +88,38 @@ body {
   align-items: center;
 }
 
-.news {
-  border: 1px solid #000000;
-  border-radius: 2px;
-  padding: 2px;
-  max-width: 50%;
-  height: auto;
-}
+/*---------------------------------------NEWS---------------------------------------*/
+
 .articles {
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 0 auto;
 }
+
+.articles p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.articles a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.articleimage {
+  background: #ebebeb;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.articleimage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*--------------------------------------TEAMS----------------------------------------------*/
+
 .teamfoto {
 }
 
@@ -133,6 +162,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 60vw;
+  /* flex-wrap: wrap; */
+  /* border: solid 1px yellow; */
 }
 
 .latest-news-card {
@@ -140,14 +171,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25vw;
-  height: 30vh;
-  border: 1px solid #000000;
+  width: 70%;
+  height: 40vh;
   border-radius: 2px;
+  font-size: 1.2rem;
+  margin: 1rem;
+  /* padding: 1rem; */
+  text-align: center;
+  background: #ebebeb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
+.latest-news-card > a {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 1rem;
+}
 .latest-news-img {
   width: 100%;
-  height: 80%;
-  object-fit: contain;
+  height: 70%;
+  object-fit: cover;
 }

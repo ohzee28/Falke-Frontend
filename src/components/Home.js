@@ -26,7 +26,6 @@ export default function Homepage({ articles }) {
   return articles.length && sortedArticles.length ? (
     <div>
       <div>HERO // STATISCHES BILD</div>
-
       <div className="latest-news-container">
         <div className="latest-news-card">
           <img
@@ -34,7 +33,9 @@ export default function Homepage({ articles }) {
             src={sortedArticles[0].image}
             alt={sortedArticles[0].headline}
           />
-          <h3>{sortedArticles[0].headline}</h3>
+          <Link to={`/articles/${sortedArticles[0]._id}`}>
+            <h3>{sortedArticles[0].headline}</h3>{" "}
+          </Link>
         </div>
         <div className="latest-news-card">
           <img
@@ -42,16 +43,20 @@ export default function Homepage({ articles }) {
             src={sortedArticles[1].image}
             alt={sortedArticles[1].headline}
           />
-          <h3>{sortedArticles[1].headline}</h3>
-        </div>
+          <Link to={`/articles/${sortedArticles[1]._id}`}>
+            <h3>{sortedArticles[1].headline}</h3>
+          </Link>
+        </div>{" "}
         <div className="latest-news-card">
           <img
             className="latest-news-img"
             src={sortedArticles[2].image}
             alt={sortedArticles[2].headline}
           />{" "}
-          <h3>{sortedArticles[2].headline}</h3>
-        </div>
+          <Link to={`/articles/${sortedArticles[2]._id}`}>
+            <h3>{sortedArticles[2].headline}</h3>
+          </Link>
+        </div>{" "}
       </div>
 
       <ul>

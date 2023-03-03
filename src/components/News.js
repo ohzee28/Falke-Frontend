@@ -9,8 +9,8 @@ const News = ({ articles }) => {
         {articles &&
           articles.map((articles) => (
             <Link to={`/articles/${articles._id}`}>
-              <p key={articles._id}>{articles.headline}</p>
               <div className="articleimage">
+                <p key={articles._id}>{articles.headline}</p>
                 <img src={articles.image} alt="Foto" />
                 {/* <Article articles={articles} /> */}
               </div>
