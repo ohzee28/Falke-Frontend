@@ -1,46 +1,99 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import FalkeLoader from "./FalkeLoader";
 
 export default function Homepage({ articles }) {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    console.log("articles in home", articles);
+  console.log("articles in home", articles);
 
-    const sortedArticles =
-        articles.length && articles.sort((a, b) => b.date - a.date);
+  //1. filtern, welche Artikel ein Bild haben
+  const filteredArticles =
+    articles.length &&
+    articles.filter((article) => article["image"] !== undefined);
 
-    const latestArticle = sortedArticles[0];
+  console.log("filtered articles", filteredArticles);
 
-    console.log("sortedArticles", sortedArticles);
+  //2. Artkel sortieren
+  const sortedArticles =
+    filteredArticles.length &&
+    filteredArticles
+      .slice()
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+  return articles.length && sortedArticles.length ? (
+    <div>
+      <div>HERO // STATISCHES BILD</div>
 
-    return articles.length ? (
-        <section>
-            <div>HERO // STATISCHES BILD</div>
-            <div className="latest-news">
-                <div><img src={articles[3].image} /></div>
-                <div><img src={articles[2].image} /></div>
-                <div><img src={articles[1].image} /></div>
-            </div>
-            <ul>
-                <li className="active"><Link to="/news">NEWS</Link></li>
-                <li className="active"><Link to="/teams">TEAMS</Link></li>
-                <li className="active"><Link to="/vereinsspielplan">VEREINSSPIELPLAN</Link></li>
-                <li className="active"><Link to="/kidsclub">KIDSCLUB</Link></li>
-                <li className="active"><Link to="/anfahrt">ANFAHRT</Link></li>
-                <li className="active"><Link to="/sponsoren">SPONSOREN</Link></li>
-                <li className="active"><Link to="/shop">SHOP</Link></li>
-                <li className="active"><Link to="/instagram">INSTAGRAM</Link></li>
-                <li className="active"><Link to="/historie">HISTORIE</Link></li>
-                <li className="active"><Link to="/vorstand">VORSTAND</Link></li>
-                <li className="active"><Link to="/links">LINKS</Link></li>
-                <li className="active"><Link to="/impressum">IMPRESSUM</Link></li>
-            </ul>
-        </section>
-    ) : <FalkeLoader />
+      <div className="latest-news-container">
+        <div className="latest-news-card">
+          <img
+            className="latest-news-img"
+            src={sortedArticles[0].image}
+            alt={sortedArticles[0].headline}
+          />
+          <h3>{sortedArticles[0].headline}</h3>
+        </div>
+        <div className="latest-news-card">
+          <img
+            className="latest-news-img"
+            src={sortedArticles[1].image}
+            alt={sortedArticles[1].headline}
+          />
+          <h3>{sortedArticles[1].headline}</h3>
+        </div>
+        <div className="latest-news-card">
+          <img
+            className="latest-news-img"
+            src={sortedArticles[2].image}
+            alt={sortedArticles[2].headline}
+          />{" "}
+          <h3>{sortedArticles[2].headline}</h3>
+        </div>
+      </div>
 
-
+      <ul>
+        <li className="active">
+          <Link to="/news">NEWS</Link>
+        </li>
+        <li className="active">
+          <Link to="/teams">TEAMS</Link>
+        </li>
+        <li className="active">
+          <Link to="/vereinsspielplan">VEREINSSPIELPLAN</Link>
+        </li>
+        <li className="active">
+          <Link to="/kidsclub">KIDSCLUB</Link>
+        </li>
+        <li className="active">
+          <Link to="/anfahrt">ANFAHRT</Link>
+        </li>
+        <li className="active">
+          <Link to="/sponsoren">SPONSOREN</Link>
+        </li>
+        <li className="active">
+          <Link to="/shop">SHOP</Link>
+        </li>
+        <li className="active">
+          <Link to="/instagram">INSTAGRAM</Link>
+        </li>
+        <li className="active">
+          <Link to="/historie">HISTORIE</Link>
+        </li>
+        <li className="active">
+          <Link to="/vorstand">VORSTAND</Link>
+        </li>
+        <li className="active">
+          <Link to="/links">LINKS</Link>
+        </li>
+        <li className="active">
+          <Link to="/impressum">IMPRESSUM</Link>
+        </li>
+      </ul>
+    </div>
+  ) : (
+    <FalkeLoader />
+  );
 }
