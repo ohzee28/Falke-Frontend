@@ -2,7 +2,7 @@ import React from "react";
 
 function Anfahrt() {
   return (
-    <div className="map-container">
+    <div className="map-container margin-top">
       <h2>Ketzin</h2>
       <div className="mapouter">
         <div class="gmap_canvas">

@@ -1,4 +1,45 @@
-img {
+.hero {
     width: 100%;
-    height: auto;
+    height: 100%;
+    /* position: relative; */
+    /* border: solid 2px white; */
+}
+
+img.hero-image {
+    width: 100vw;
+    /* height: 75vh; */
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255)
+}
+
+.hero-text h1 {
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 6px #000000;
+}
+
+@media screen and (max-width: 555px) {
+    .hero-text h1 {
+        padding: 10px 20px;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        padding: 0 0 2rem 0;
+    }
 }

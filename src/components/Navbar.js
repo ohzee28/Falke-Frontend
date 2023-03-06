@@ -32,9 +32,9 @@ export default function Navbar() {
         <li className="active">
           <Link to="/instagram">INSTAGRAM</Link>
         </li>
-        <li className="active">
+        {/* <li className="active">
           <Link to="/links">LINKS</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

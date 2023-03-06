@@ -1,31 +1,23 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import FalkeLoader from "./FalkeLoader";
 
 const Teams = ({ teams }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
-  console.log("teams in teams", teams);
+    console.log('teams in teams', teams);
 
-  return teams.length ? (
-    <div className="news">
-      <div className="articles">
-        {teams.length &&
-          teams.map((team) => (
-            <Link to={`/teamseite/${team._id}`}>
-              <p key={team._id}>{team.teamname}</p>
-              <div className="teamimage">
-                <img src={team.image} alt="Foto" />
-              </div>
-            </Link>
-          ))}
-      </div>
-    </div>
-  ) : (
-    <FalkeLoader />
-  );
-};
+    return teams.length ? (
+        <div className="news margin-top">
+            <div className="articles">
+                {teams.length && teams.map((team) => (
+                    <Link to={`/teamseite/${team._id}`}>
+                        <p key={team._id}>{team.teamname}</p>
+                        <div >
+                            <img className="teamimage" src={team.image} alt="Foto" />
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </div>
+    ) : <h1>...loading</h1>
+}
 
-export default Teams;
+export default Teams

@@ -6,12 +6,15 @@ function Hero() {
     return (<>
 
         <div className="hero">
-            <img src={picture} alt="hero-image" />
+            <img className="hero-image" src={picture} alt="hero-image" />
+
+            <div className="hero-text">
+                <p>Willkommen auf der Website des</p>
+                <h1>FSV FALKE 95</h1>
+            </div>
+
         </div>
-        <div className="hero-text">
-            <p>Willkommen auf der Website des</p>
-            <h1>FSV FALKE 95</h1>
-        </div>
+
     </>
     )
 }
