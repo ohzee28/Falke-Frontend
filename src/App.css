@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 
 * {
-  margin: 0;
+  margin: 25px;
   padding: 0;
   box-sizing: border-box;
   font-family: "League Gothic", Sans-Serif;
@@ -16,6 +16,8 @@ body {
   margin: 0;
   background-color: #da1b2b;
 }
+
+/*NAVBAR*/
 
 .nav {
   background-color: #1f1f1f; 
@@ -71,9 +73,13 @@ body {
   background-color: #da1b2b;
 }
 
+/*INSTAWIDGET*/
+
 .ElfsightWidget {
   margin: 3;
 }
+
+/*APP GESAMT*/
 
 .App {
   text-align: center;
@@ -95,6 +101,9 @@ body {
   max-width: 50%;
   height: auto;
 }
+
+/*ARTIKELSEITE*/
+
 .articles {
 }
 .teamfoto {
