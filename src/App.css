@@ -145,7 +145,14 @@ body {
 
 /*--TEAMS--*/
 
-.teamfoto {}
+.teamfoto {
+  width: 100%;
+}
+
+.teamcontainer {
+  /* border: solid 2px white; */
+  width: 100%;
+}
 
 .widgetspielplan {}
 
