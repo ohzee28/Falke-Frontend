@@ -8,8 +8,8 @@
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
 }
 
 .falkelogo {
-  height: 40px;
+  height: 55px;
 
 }
 
@@ -119,6 +119,8 @@ body {
   align-items: center;
   width: 70vw;
   margin: 0 auto;
+
+
 }
 
 .articles p {
@@ -133,17 +135,73 @@ body {
 
 .article-container {
   background: #ebebeb;
-  width: 70%;
+  width: 50%;
   margin: 1rem auto;
+  border: solid;
+  box-shadow: 0 2.5px 7.5px rgb(55, 56, 57);
 }
 
 .news-image {
   width: 50%;
   height: 50%;
   object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3.5rem;
+}
+
+/*--ARTIKEL SEITE--*/
+
+.articlecontainer {
+  background: #ebebeb;
+  width: 90%;
+  margin: 1rem;
+  padding: 3rem;
+  border: solid;
+  box-shadow: 0 2.5px 7.5px rgb(55, 56, 57);
+  margin-top: 15%;
+  font-size: larger;
+}
+
+.articlefoto {
+  padding-bottom: 1.5rem;
+}
+
+.articlefotoA {
+  width: 100%;
+  height: 100%;
 }
 
 /*--TEAMS--*/
+
+.teams-name {
+  border-style: solid;
+  background-color: #ebebeb;
+  box-shadow: 0 2.5px 7.5px rgb(25, 25, 26);
+  margin-right: 40rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.teams-link {
+  text-decoration: none;
+  color: #161616;
+}
+
+.teamname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  background-color: #ebebeb;
+  box-shadow: 0 2.5px 7.5px rgb(55, 56, 57);
+  margin-right: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 50%;
+  height: 50px;
+}
 
 .teamfoto {
   width: 100%;
@@ -157,6 +215,37 @@ body {
 
 .teamimage {
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.2em 1.45em;
+  margin: 0.1em;
+  border: 0.15em solid #ebebeb;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'League Gothic', sans-serif;
+  font-weight: 300;
+  color: #000000;
+  background-color: #ebebeb;
+  text-align: center;
+  position: relative;
+}
+
+.button:hover {
+  border-color: #161616;
+}
+
+.button:active {
+  background-color: #101010;
+}
+
+@media all and (max-width:30em) {
+  .button {
+    display: block;
+    margin: 0.2em auto;
+  }
 }
 
 /*LOADER*/
@@ -171,10 +260,11 @@ body {
 }
 
 .loader {
-  width: 5vw;
-  height: 5vw;
+  width: 15vw;
+  height: 15vw;
   /* add keyframes */
   animation: rotate 3s linear infinite;
+  margin-top: 10rem;
 }
 
 @keyframes rotate {
@@ -189,13 +279,27 @@ body {
 
 /*HOME*/
 
+.home-container {}
+
+.news-headline-home {
+  text-align: center;
+  font-size: 2rem;
+  border-style: solid;
+  margin: 9px;
+  padding: 7px;
+  align-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+}
+
 .latest-news-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60vw;
-  /* flex-wrap: wrap; */
-  /* border: solid 1px yellow; */
+  flex-wrap: wrap;
+  /*border: solid 1px rgb(0, 0, 0);*/
+  margin: 0 auto;
 }
 
 .latest-news-card {
@@ -203,7 +307,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 25%;
   height: 40vh;
   border-radius: 2px;
   font-size: 1.2rem;
@@ -214,7 +318,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.latest-news-card>a {
+.latest-news-card a {
   text-decoration: none;
   color: #000000;
   margin-top: 1rem;
@@ -228,4 +332,45 @@ body {
 
 .hero-section {
   border: solid 2px rgb(34, 178, 244);
+}
+
+.home-link-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  margin: 7px;
+  /*border: solid 1px rgb(0, 0, 0);*/
+}
+
+
+.homelink>a {
+  text-decoration: none;
+  color: #161616;
+}
+
+.homelink {
+
+  border-style: solid;
+  margin: 9px;
+  padding: 7px;
+  align-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+  font-family: "League Gothic";
+  font-size: 3rem;
+  box-shadow: 0 2.5px 7.5px rgb(55, 56, 57);
+
+}
+
+.link {
+  color: #161616;
+}
+
+.anfahrt-ort {
+  border-style: solid;
+  background-color: #ebebeb;
+  box-shadow: 0 2.5px 7.5px rgb(55, 56, 57);
+  margin-right: 25rem;
+  text-align: center;
 }

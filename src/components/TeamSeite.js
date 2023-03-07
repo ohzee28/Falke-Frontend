@@ -43,8 +43,7 @@ function TeamSeite({ teams }) {
 
     return thisTeam ? (
         <div className="teamcontainer">
-            <div id="widget1"></div>
-            {thisTeam.websitekeys.length > 1 ? <div id="widget2"></div> : ""}
+            
             <div className="teamname">
                 <h2>{thisTeam.teamname}</h2>
             </div>
@@ -52,9 +51,14 @@ function TeamSeite({ teams }) {
                 <img className="teamimage" src={thisTeam.image} alt="Foto" />
             </div>
 
+            <div id="widget1"></div>
+            {thisTeam.websitekeys.length > 1 ? <div id="widget2"></div> : ""}
+
+            <p></p>
             <Link to="/teams">
                 <button className="button">Zurück zur Teamübersicht</button>
             </Link>
+            <p></p>
         </div>
     ) : (
         <FalkeLoader />

@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Anfahrt() {
   return (
+    <>
     <div className="map-container margin-top">
-      <h2>Ketzin</h2>
+      <h2 className="anfahrt-ort">Ketzin</h2>
       <div className="mapouter">
         <div class="gmap_canvas">
           <iframe
@@ -17,7 +19,7 @@ function Anfahrt() {
           ></iframe>
         </div>
       </div>
-      <h2>Falkenrehde</h2>
+      <h2 className="anfahrt-ort">Falkenrehde</h2>
 
       <div className="mapouter">
         <div class="gmap_canvas">
@@ -33,6 +35,14 @@ function Anfahrt() {
         </div>
       </div>
     </div>
+
+    <p></p>
+            <Link to="/">
+                <button className="button">Homepage</button>
+            </Link>
+            <p></p>
+
+    </>
   );
 }
 

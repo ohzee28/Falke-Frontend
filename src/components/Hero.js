@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroStyles.css";
-import picture from "../images/Teamkreis.JPG";
+import picture from "../images/Teamkreisklein.jpg";
 
 function Hero() {
     return (<>

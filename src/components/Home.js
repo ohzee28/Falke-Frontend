@@ -25,10 +25,11 @@ export default function Homepage({ articles }) {
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return articles.length && sortedArticles.length ? (
-        <div>
+        <div className="home-container">
             <Hero />
-
+            <p className="news-headline-home">Die neusten Artikel</p>
             <div className="latest-news-container">
+            
                 <div className="latest-news-card">
                     <img
                         className="latest-news-img"
@@ -59,46 +60,47 @@ export default function Homepage({ articles }) {
                         <h3>{sortedArticles[2].headline}</h3>
                     </Link>
                 </div>{" "}
+               
             </div>
 
-            <ul>
-                <li className="active">
+            <li className="home-link-container">
+                <div className="homelink">
                     <Link to="/news">NEWS</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/teams">TEAMS</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/vereinsspielplan">VEREINSSPIELPLAN</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/kidsclub">KIDSCLUB</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/anfahrt">ANFAHRT</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/sponsoren">SPONSOREN</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/shop">SHOP</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/instagram">INSTAGRAM</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/historie">HISTORIE</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/vorstand">VORSTAND</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/links">LINKS</Link>
-                </li>
-                <li className="active">
+                </div>
+                <div className="homelink">
                     <Link to="/impressum">IMPRESSUM</Link>
-                </li>
-            </ul>
+                </div>
+            </li>
         </div>
     ) : (
         <FalkeLoader />

@@ -11,10 +11,10 @@ const Teams = ({ teams }) => {
 
     return teams.length ? (
         <div className="news margin-top">
-            <div className="articles">
+            <div className="teams-container">
                 {teams.length && teams.map((team) => (
-                    <Link to={`/teamseite/${team._id}`}>
-                        <p key={team._id}>{team.teamname}</p>
+                    <Link className="teams-link" to={`/teamseite/${team._id}`}>
+                        <p className="teams-name" key={team._id}>{team.teamname}</p>
                         <div >
                             <img className="teamimage" src={team.image} alt="Foto" />
                         </div>

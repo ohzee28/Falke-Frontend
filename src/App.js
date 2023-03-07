@@ -54,7 +54,8 @@ function App() {
   useEffect(() => {
     const fetchArticles = async () => {
       const response = await fetch(
-        "https://falkebackend.onrender.com/articles"
+       "https://falkebackend.onrender.com/articles"
+       //"http://localhost:8080/articles"
       );
       const json = await response.json();
       console.log(articles);
@@ -64,6 +65,7 @@ function App() {
     };
 
     const fetchTeams = async () => {
+      //const response = await fetch("http://localhost:8080/teams");
       const response = await fetch("https://falkebackend.onrender.com/teams");
       const json = await response.json();
       console.log(teams);

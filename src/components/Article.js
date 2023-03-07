@@ -16,19 +16,24 @@ function Article({ articles }) {
   // console.log(articles);
 
   return thisArticle ? (
+    <>
     <div className="articlecontainer">
       <div className="articleheadline">
         <h2>{thisArticle.headline}</h2>
       </div>
       <div className="articlefoto">
-        <img src={thisArticle.image} alt="Foto" />
+        <img className="articlefotoA" src={thisArticle.image} alt="Foto" />
       </div>
       <div className="articlebody">{thisArticle.body}</div>
       <div className="articleauthor">{thisArticle.author}</div>
-      <Link to="/news">
+     
+    </div>
+    <p>
+    <Link to="/news">
         <button className="button">Zurück zur Newsseite</button>
       </Link>
-    </div>
+    </p>
+    </>
   ) : (
     <FalkeLoader />
   );

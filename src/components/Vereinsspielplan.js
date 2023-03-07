@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Vereinsspielplan() {
     useEffect(() => {
@@ -26,7 +27,19 @@ export default function Vereinsspielplan() {
         }, 100);
     }, []);
 
-    return <div className="margin-top-extra" id="widget1"></div>;
+    return (<><div className="margin-top-extra" id="widget1">
+
+    </div>
+
+        <p></p>
+        <Link to="/">
+            <button className="button">Homepage</button>
+        </Link>
+        <p></p>
+    </>);
+
+
+
 
     //   return (
     //     <>
