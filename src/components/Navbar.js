@@ -26,12 +26,15 @@ export default function Navbar() {
         <li className="active">
           <Link to="/vereinsspielplan">VEREINSSPIELPLAN</Link>
         </li>
-        <li className="active">
-          <Link to="/anfahrt">ANFAHRT</Link>
-        </li>
+
         <li className="active">
           <Link to="/instagram">INSTAGRAM</Link>
         </li>
+
+        <li className="active">
+          <Link to="/anfahrt">ANFAHRT</Link>
+        </li>
+        
         {/* <li className="active">
           <Link to="/links">LINKS</Link>
         </li> */}
