@@ -17,19 +17,30 @@ export default function Homepage({ articles }) {
 
     console.log("filtered articles", filteredArticles);
 
+    function compare(a, b) {
+        if (new Date(b.date).getTime() < new Date(a.date).getTime()) {
+            return -1;
+        }
+        if (new Date(b.date).getTime() > new Date(a.date).getTime()) {
+            return 1;
+        }
+        return 0;
+    }
+
     //2. Artkel sortieren
     const sortedArticles =
         filteredArticles.length &&
         filteredArticles
             .slice()
-            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            //.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            .sort(compare)
 
     return articles.length && sortedArticles.length ? (
         <div className="home-container">
             <Hero />
             <p className="news-headline-home">FALKE NACHRICHTEN</p>
             <div className="latest-news-container">
-            
+
                 <div className="latest-news-card">
                     <img
                         className="latest-news-img"
@@ -60,7 +71,7 @@ export default function Homepage({ articles }) {
                         <h3>{sortedArticles[2].headline}</h3>
                     </Link>
                 </div>{" "}
-               
+
             </div>
 
             <li className="home-link-container">
